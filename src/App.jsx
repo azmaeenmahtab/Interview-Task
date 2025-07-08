@@ -4,6 +4,7 @@ import Pricing from "../components/Pricing/pricing"
 import Features from "../components/Features/feature"
 import CourseCarousel from "../components/Carosoul/carosoul"
 import TestimonialSection from "../components/Review/review"
+import Footer from "../components/Footer/footer"
 function App() {
  
   return (
@@ -14,6 +15,7 @@ function App() {
       <Features />
       <Pricing />
       <TestimonialSection />
+      <Footer />
     </>
   )
 }
