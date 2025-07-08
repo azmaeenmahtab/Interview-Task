@@ -9,8 +9,8 @@ const Navbar = () => {
             {/* middle btns */}
             <div className="flex items-center gap-10 text-[#718096]">
                 <a href="#hero">Home</a>
-                <a href="">Features</a>
-                <a href="">Pricing</a>
+                <a href="#feature">Features</a>
+                <a href="#pricing">Pricing</a>
                 <a href="">About</a>
                 <a href="">Contact</a>
             </div>

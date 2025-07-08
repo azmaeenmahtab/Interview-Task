@@ -1,0 +1,25 @@
+/* Custom navigation buttons for Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: #0f172a;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 40%;
+    transition: background-color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: #1e293b;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px;
+    font-weight: bold;
+}

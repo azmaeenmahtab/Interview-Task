@@ -1,11 +1,10 @@
- import heroImg from "../../src/assets/bg-img.png";
-  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faAngleRight} from '@fortawesome/free-solid-svg-icons';
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
     return (
-        <div id="hero " className="flex items-center justify-center gap-7 max-w-[1240px] px-5 mx-auto pt-14">
+        <div id="hero " className="flex items-center justify-center gap-7 max-w-[1240px] px-5 mx-auto pt-14 mb-[100px]">
         <div className="   ">
 
         {/* Ai button */}
@@ -31,8 +30,8 @@ const Hero = () => {
 </div>
     </div>
 
-    <div className="max-w-[500px]">
-        <img src="../../src/assets/dashboard.jpg" alt="" srcset="" className="rounded-3xl" />
+    <div className="w-[600px]">
+        <img src="../../src/assets/dashboard_prev_ui.png" alt="" srcset="" className="rounded-3xl w-full" />
     </div>
     </div>
     )
