@@ -28,7 +28,7 @@ const CourseCarousel = () => {
   ];
 
   return (
-    <div className="max-w-[1240px] mx-auto px-5 py-12">
+    <div id="courses" className="max-w-[1240px] mx-auto px-5 py-12 ">
        <div className="text-center mb-[80px] max-w-[720px] mx-auto flex flex-col items-center">
         <div className="flex justify-center mb-6 items-center gap-[5px] border border-teal-400/60 w-[100px] rounded-full px-[5px] py-[3px] bg-teal-400/10 text-teal-400">
         <svg 

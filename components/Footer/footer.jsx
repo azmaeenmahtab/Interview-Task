@@ -2,7 +2,7 @@ import { FaLinkedinIn, FaTwitter, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0F172A] text-gray-400 pt-16 pb-10 px-6 md:px-12">
+    <footer className="bg-[#0F172A] text-gray-400 pt-[120px] pb-[100px] px-6 md:px-12">
       <div className="max-w-[1240px] mx-auto grid grid-cols-4 gap-10">
         {/* Logo */}
         <div>
@@ -11,8 +11,8 @@ const Footer = () => {
 
         {/* Product */}
         <div>
-          <h3 className="text-white font-semibold mb-4">Courses</h3>
-          <ul className="space-y-2 text-sm">
+          <h3 className="text-white font-semibold mb-10">Courses</h3>
+          <ul className="space-y-10 text-sm">
             <li><a href="/pricing" className="hover:text-white">Pricing</a></li>
             <li><a href="/features" className="hover:text-white">Features</a></li>
             <li><a href="/tracks" className="hover:text-white">Learning Tracks</a></li>
@@ -22,8 +22,8 @@ const Footer = () => {
 
         {/* Company */}
         <div>
-          <h3 className="text-white font-semibold mb-4">Company</h3>
-          <ul className="space-y-2 text-sm">
+          <h3 className="text-white font-semibold mb-10">Company</h3>
+          <ul className="space-y-10 text-sm">
             <li><a href="/about" className="hover:text-white">About</a></li>
             <li><a href="/blog" className="hover:text-white">Blog</a></li>
             <li><a href="/success-stories" className="hover:text-white">Testimonials</a></li>
@@ -36,8 +36,8 @@ const Footer = () => {
 
         {/* Resources */}
         <div>
-          <h3 className="text-white font-semibold mb-4">Resources</h3>
-          <ul className="space-y-2 text-sm">
+          <h3 className="text-white font-semibold mb-10">Resources</h3>
+          <ul className="space-y-10 text-sm">
             <li><a href="/faq" className="hover:text-white">FAQ</a></li>
             <li><a href="/contact" className="hover:text-white">Contact</a></li>
             <li><a href="/terms" className="hover:text-white">Terms of Service</a></li>
