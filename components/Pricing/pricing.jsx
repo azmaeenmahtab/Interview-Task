@@ -1,11 +1,16 @@
 import { useState } from "react";
+import { Navigate, useNavigate } from 'react-router-dom';
 
 
 const Pricing = () => {
 
     const [active, setActive] = useState("monthly");
     
-  
+  const navigate = useNavigate();
+
+    const handleGetStart = () => {
+        navigate('/coachingregister');
+    }
   
    
 
@@ -88,7 +93,7 @@ const Pricing = () => {
                 </ul>
 
                 <div className="flex justify-center items-center">
-                  <button className="mb-[40px] text-white bg-[#171923] w-full rounded-full px-6 py-4 border border-gray-400/40 cursor-pointer hover:bg-gray-200/15 transition-all">
+                  <button onClick={handleGetStart} className="mb-[40px] text-white bg-[#171923] w-full rounded-full px-6 py-4 border border-gray-400/40 cursor-pointer hover:bg-gray-200/15 transition-all">
                     Get started
                   </button>
                 </div>
@@ -131,7 +136,7 @@ const Pricing = () => {
                 </ul>
 
                 <div className="flex justify-center items-center">
-                  <button className="mb-[40px] text-black bg-white w-full rounded-full px-6 py-4 border border-gray-400/40 cursor-pointer hover:bg-white/80 transition-all">
+                  <button onClick={handleGetStart} className="mb-[40px] text-black bg-white w-full rounded-full px-6 py-4 border border-gray-400/40 cursor-pointer hover:bg-white/80 transition-all">
                     Get started
                   </button>
                 </div>
@@ -168,7 +173,7 @@ const Pricing = () => {
                 </ul>
 
                 <div className="flex justify-center items-center">
-                  <button className="mb-[40px] text-white bg-[#171923] w-full rounded-full px-6 py-4 border border-gray-400/40 cursor-pointer hover:bg-gray-200/15 transition-all">
+                  <button onClick={handleGetStart} className="mb-[40px] text-white bg-[#171923] w-full rounded-full px-6 py-4 border border-gray-400/40 cursor-pointer hover:bg-gray-200/15 transition-all">
                     Get started
                   </button>
                 </div>

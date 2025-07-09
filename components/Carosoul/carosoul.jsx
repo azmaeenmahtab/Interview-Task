@@ -1,9 +1,18 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
+import { Navigate, useNavigate } from 'react-router-dom';
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "../Carosoul/CourseCarousel.css"; 
 const CourseCarousel = () => {
+
+const navigate = useNavigate();
+
+    const handleShow = () => {
+        navigate('/coachingregister');
+    }
+
   const courses = [
     {
       title: "React for Beginners",
@@ -78,8 +87,8 @@ const CourseCarousel = () => {
                 <h3 className="text-white text-xl font-semibold mb-2">
                   {course.title}
                 </h3>
-                <button className="px-4 py-2 mt-2 border border-blue-500/50 hover:bg-blue-700/30 text-white rounded-full">
-                  Enroll Now
+                <button onClick={handleShow} className="px-4 py-2 mt-2 border border-blue-500/50 hover:bg-blue-700/30 text-white rounded-full">
+                  Showcase Yours
                 </button>
               </div>
             </div>

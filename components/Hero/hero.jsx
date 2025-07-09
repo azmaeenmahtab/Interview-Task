@@ -1,8 +1,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faAngleRight} from '@fortawesome/free-solid-svg-icons';
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+
+    const navigate = useNavigate();
+
+    const handleGetStart = () => {
+        navigate('/coachingregister');
+    }
+
     return (
         <div id="hero " className="flex items-center justify-center gap-7 max-w-[1240px] px-5 mx-auto pt-14 mb-[100px]">
         <div className="   ">
@@ -25,7 +33,7 @@ const Hero = () => {
     </div>
     {/* 2 buttons */}
     <div className="flex gap-4 mt-[70px] mx-auto">
-    <button className=" text-black bg-white rounded-full font-semibold px-[30px] py-[16px] ">Get started<FontAwesomeIcon icon={faAngleRight} style={{color: "#000000",marginLeft:"10px"}} /></button>
+    <button onClick={handleGetStart} className=" text-black bg-white rounded-full font-semibold px-[30px] py-[16px] ">Get started<FontAwesomeIcon icon={faAngleRight} style={{color: "#000000",marginLeft:"10px"}} /></button>
     <button className="px-6 py-3 text-white">Documentation <FontAwesomeIcon icon={faAngleRight} style={{color: "white",marginLeft:"10px"}} /></button>
 </div>
     </div>
