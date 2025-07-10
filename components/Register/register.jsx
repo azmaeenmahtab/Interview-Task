@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 const SignUp = () => {
   // Separate useState for each field
   const [name, setName] = useState('');
@@ -8,16 +8,62 @@ const SignUp = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const navigate = useNavigate();
+
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
+
     // Example validation (optional)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+    alert("Invalid email format!");
+    return;
+  }
+
+  if (!/^\d{1,11}$/.test(number)) {
+    alert("Phone number must be up to 11 digits only!");
+    return;
+  }
+
     if (password !== confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
 
     // TODO: Send data to backend
+    const body = {
+      name: name,
+      email: email,
+      phone: number,      
+      password: password
+    };
+
+    try {
+    const response = await fetch("http://localhost:5000/api/auth/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "Something went wrong");
+    }
+
+    console.log("User registered:", data);
+
+    navigate('/login');
+
+  } catch (error) {
+    console.error("Registration error:", error.message);
+  }
+
   };
 
 
@@ -78,6 +124,7 @@ const SignUp = () => {
             />
           </div>
           <button
+            onClick={handleSubmit}
             type="submit"
             className="w-full py-3 mt-2 rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white font-semibold transition duration-300"
           >

@@ -6,7 +6,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
     // Simple validation (customize as needed)
@@ -15,12 +15,42 @@ const Login = () => {
       return;
     }
 
-    console.log("Logging in with:", email, password);
 
-    // TODO: Send login request to your backend or Supabase here
+    // login api
+    try{
+    const body = {
+      email: email,
+      password: password
+    }
 
-    // Example: redirect on success
+    const response = await fetch("http://localhost:5000/api/auth/login",{
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
+    })
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "Something went wrong");
+    }
+
+    console.log("User registered:", data.user.token);
+    const token = data.user.token;
+
+    localStorage.setItem("token", token);
+
     navigate('/');
+
+    }catch(error){
+          console.error("Registration error:", error.message);
+
+    }
+
+    
+
   };
 
   return (
