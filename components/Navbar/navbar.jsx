@@ -15,7 +15,7 @@ const Navbar = () => {
 
 
     return(
-        <nav className="border-b border-gray-500/50 bg-[#0F172ACC]">
+        <nav className="border-b border-gray-500/50 bg-[#030014]">
         <div className="flex items-center justify-between max-w-[1240px] p-5 mx-auto">
             {/* icon */}
             <div className="text-3xl font-bold text-white">
@@ -33,7 +33,13 @@ const Navbar = () => {
             {/* right btns */}
             <div className="flex items-center gap-3.5 font-semibold text-white">
                 <button onClick={handleLogin}>Login</button>
-                <button onClick={handleRegister} className="border border-gray-600 rounded-full px-5 py-2 ">Get Started</button>
+                <div class="relative p-[1px] rounded-lg">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black  to-white rounded-lg"></div>
+                    <button onClick={handleRegister} class="relative bg-white rounded-lg px-2.5 py-1 bg-gradient-to-r from-[#7A6BCC] to-[#0C0C0D]">
+                    Get Started
+                    </button>
+                </div>
+
             </div>
         </div>
         </nav>

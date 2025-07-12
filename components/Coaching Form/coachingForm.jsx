@@ -121,7 +121,7 @@ const RegisterCenter = () => {
   try {
     data = JSON.parse(text); 
   } catch (jsonErr) {
-    console.error("Not JSON response:", text); 
+    console.error("Not JSON response:", text, jsonErr); 
     throw new Error("Server did not return valid JSON");
   }
 
