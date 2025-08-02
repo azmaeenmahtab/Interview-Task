@@ -9,11 +9,14 @@ import SignUp from "../components/Register/register"
 import Login from "../components/Login/login"
 import RegisterCenter from "../components/Coaching Form/coachingForm"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MyProfile from "../components/profile/profile"
 
 function Home () {
 
+
+
   return(
-    <>
+    < >
       <Navbar />
       <Hero />
       <CourseCarousel />
@@ -35,6 +38,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/coachingregister" element={<RegisterCenter />} />
+        <Route path="/profile" element={<MyProfile />} />
 
       </Routes>
     </Router>

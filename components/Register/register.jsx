@@ -57,6 +57,7 @@ const SignUp = () => {
     }
 
     console.log("User registered:", data);
+    localStorage.setItem("name", name)
 
     navigate('/login');
 

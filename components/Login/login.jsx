@@ -41,6 +41,7 @@ const Login = () => {
     const token = data.user.token;
 
     localStorage.setItem("token", token);
+    localStorage.setItem("email", email);
 
     navigate('/');
 
