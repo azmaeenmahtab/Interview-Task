@@ -2,7 +2,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 
 const TestimonialSection = () => {
   return (
-    <section className="bg-[#0F172A] text-white py-[100px] px-4">
+    <section id="review" className="bg-[#030014] text-white py-[100px] px-4">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
           What Our Clients Say

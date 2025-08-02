@@ -15,7 +15,7 @@ const Navbar = () => {
 
 
     return(
-        <nav className="border-b border-gray-500/50 bg-[#030014]">
+        <nav className="border-b border-gray-500/50 bg-[#030014] sticky top-0 z-50">
         <div className="flex items-center justify-between max-w-[1240px] p-5 mx-auto">
             {/* icon */}
             <div className="text-3xl font-bold text-white">
@@ -27,8 +27,8 @@ const Navbar = () => {
                 <a href="#courses">Courses</a>
                 <a href="#feature">Features</a>
                 <a href="#pricing">Pricing</a>
-                <a href="">About</a>
-                <a href="">Contact</a>
+                <a href="#review">Review</a>
+                <a href="#contact">Contact</a>
             </div>
             {/* right btns */}
             <div className="flex items-center gap-3.5 font-semibold text-white">

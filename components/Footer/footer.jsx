@@ -2,7 +2,7 @@ import { FaLinkedinIn, FaTwitter, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0F172A] text-gray-400 pt-[120px] pb-[100px] px-6 md:px-12">
+    <footer id="contact" className="bg-[#030014] text-gray-400 pt-[120px] pb-[100px] px-6 md:px-12">
       <div className="max-w-[1240px] mx-auto grid grid-cols-4 gap-10">
         {/* Logo */}
         <div>
